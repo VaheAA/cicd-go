@@ -23,7 +23,7 @@ jobs:
       - id: "auth"
         uses: "google-github-actions/auth@v2"
         with:
-          service_account: "477910788848-compute@developer.gserviceaccount.com"
+          credentials_json: "${{secrets.GCP_CREDENTIALS}}"
 
       - name: "Set up Cloud SDK"
         uses: "google-github-actions/setup-gcloud@v3"
